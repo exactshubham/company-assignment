@@ -1,10 +1,9 @@
 const express= require('express')
 const customerController= require('../controllers/customerController');
 const cardController= require("../controllers/cardController");
+const {isValidRequest}=require("../middleware/customerValidation");
 const router = express.Router();
-
-
-router.post("/createCustomer", customerController.createCustomer);
+router.post("/createCustomer", isValidRequest, customerController.createCustomer);
 router.get("/getCustomer", customerController.getCustomer);
 router.delete("/delCustomer", customerController.deleteCustomer);
 
