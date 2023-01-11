@@ -1,14 +1,9 @@
 const express= require('express')
-const customerController= require('../controllers/customerController');
-const cardController= require("../controllers/cardController");
-const {isValidRequest}=require("../middleware/customerValidation");
-const router = express.Router();
-router.post("/createCustomer", isValidRequest, customerController.createCustomer);
-router.get("/getCustomer", customerController.getCustomer);
-router.delete("/delCustomer", customerController.deleteCustomer);
+const studentController= require('../controllers/studentController');
 
-router.post("/createCard", cardController.createCard );
-router.get("/getCard", cardController.getCard );
+const router = express.Router();
+router.post("/createStudent", studentController.createStudent);
+router.post("/loginStudent", studentController.loginStudent);
 
 
 router.all("/*", function (req, res) {

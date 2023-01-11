@@ -1,45 +1,39 @@
-Problem Statement:
-Create two API’s which can perform the specified CRUD operations.The project structure should
-have models, middlewares, controllers and services. Write MongoDB queries to fetch, update,
-add or delete data from the specified collections. You can assume that the collections already
-exist in the database and just define the project structure.
+Technology:
+Use any.
 
+Database:
+MYSQL / MongoDB / (Use any)
 
-Customer API
-1. Get all customers List with status ACTIVE [GET]
-2. Delete customer. [DELETE]
-3. Create new customer [POST]
+Below are the task requirements.
 
+Task
+The task is very simple. You just need to think twice and follow the below
+instruction
 
-Card API
-1. Get all Card List[GET]
-2. Create new card [POST]
+1. Create a login screen.
 
+2. After logging in the student list will appear with filters(name, subject) and
+add/edit/view/delete.
 
+3. While adding a student with the student and subject combination that
+already exists in the database then include the marks in existing marks.
+otherwise, it will create a new student record.
 
+For example, You have a current record in the database
+Name Subject Marks
+Jhon Maths 75
 
-Customer collection field:
+If we add the same data again
+Name Subject Marks
+Jhon Maths 50
 
-Field Type Description
-firstName string
-lastName string
-mobileNumber string 10 digits long
-DOB date
-emailID string abc@xyz.com
-address string
-customerID string UUID
-status string ACTIVE / INACTIVE
+Then the total should be 125
 
+4. Student data will appear separately as per the logged-in user.
 
-
-
-Card collection field
-
-Field Type Description
-cardNumber string Auto_increment e.g: C001
-cardType String [REGULAR/SPECIAL]
-customerName string
-status string [ACTIVE/INACTIVE] Default: ACTIVE
-vision string
-customerID string Reference from customer
-table
+Note :
+● UI must be responsive.
+● Edit form must be in the popup window.
+● Perform edit and delete option through token-based API.
+● Use encryption
+● Error handling with logs
